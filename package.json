@@ -6,14 +6,15 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "publish": "tsc && npm publish --access public"
+    "publish": "npm run patch && tsc && npm publish --access public"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TinTinWinata/react-textarea.git"
   },
   "files": [
-    "dist"
+    "dist",
+    "textarea.css"
   ],
   "exports": {
     ".": {
