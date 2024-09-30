@@ -11,12 +11,11 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = TextArea;
 const jsx_runtime_1 = require("react/jsx-runtime");
 const react_1 = require("react");
-function TextArea(_a) {
-    var { initialSize = 100, onChange, style } = _a, props = __rest(_a, ["initialSize", "onChange", "style"]);
-    const ref = (0, react_1.useRef)(null);
+const TextArea = (0, react_1.forwardRef)((_a, ref) => {
+    var { initialSize = 100, onChangeText, onChange, style } = _a, props = __rest(_a, ["initialSize", "onChangeText", "onChange", "style"]);
+    const innerRef = (0, react_1.useRef)(null);
     const baseStyle = {
         width: "100%",
         resize: "none",
@@ -29,19 +28,22 @@ function TextArea(_a) {
         lineHeight: "1.5",
     };
     function checkSize() {
-        const element = ref.current;
+        const element = innerRef.current;
         if (element) {
             element.style.height = "inherit";
             element.style.height = `${Math.max(element.scrollHeight, initialSize)}px`;
         }
     }
     (0, react_1.useEffect)(() => {
-        if (ref && ref.current) {
+        if (innerRef.current) {
             checkSize();
         }
-    }, [ref, ref.current]);
-    return ((0, jsx_runtime_1.jsx)("textarea", Object.assign({}, props, { ref: ref, style: Object.assign(Object.assign({}, baseStyle), style), onChange: (e) => {
+    }, [innerRef.current]);
+    (0, react_1.useImperativeHandle)(ref, () => innerRef.current);
+    return ((0, jsx_runtime_1.jsx)("textarea", Object.assign({}, props, { ref: innerRef, style: Object.assign(Object.assign({}, baseStyle), style), onChange: (e) => {
             checkSize();
-            onChange && onChange(e.currentTarget.value);
+            onChange && onChange(e);
+            onChangeText && onChangeText(e.currentTarget.value);
         } })));
-}
+});
+exports.default = TextArea;

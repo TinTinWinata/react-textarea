@@ -1,9 +1,10 @@
-import { TextareaHTMLAttributes } from "react";
-export interface TextAreaProps extends Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, "onChange"> {
+import React, { TextareaHTMLAttributes } from "react";
+export interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
     placeholder?: string;
     className?: string;
     rows?: number;
-    onChange?: (text: string) => void;
+    onChangeText?: (text: string) => void;
     initialSize?: number;
 }
-export default function TextArea({ initialSize, onChange, style, ...props }: TextAreaProps): import("react/jsx-runtime").JSX.Element;
+declare const TextArea: React.ForwardRefExoticComponent<TextAreaProps & React.RefAttributes<HTMLTextAreaElement>>;
+export default TextArea;
