@@ -1,12 +1,13 @@
 {
   "name": "@tintinwinata/react-textarea",
-  "version": "1.0.16",
+  "version": "1.0.20",
   "description": "React Textarea Component for React.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
   "scripts": {
-    "build": "tsc",
-    "release": "npm version patch && webpack --mode=production && npm publish --access public",
+    "build": "rollup -c --bundleConfigAsCjs",
+    "release": "npm version patch && npm build && npm publish --access public",
     "deploy": "npm publish --access public"
   },
   "repository": {
@@ -33,11 +34,23 @@
   },
   "homepage": "https://tintinwinata.my.id",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.0",
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "tslib": "^2.7.0",
     "typescript": "^5.6.2"
   },
   "peerDependencies": {
     "react": "^18.3.1"
+  },
+  "dependencies": {
+    "rollup": "^4.22.5",
+    "rollup-plugin-postcss": "^4.0.2"
   }
 }
