@@ -1,0 +1,39 @@
+{
+  "name": "@tintinwinata/react-textarea",
+  "version": "1.0.0",
+  "description": "React Textarea Component for React.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TinTinWinata/react-textarea.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "TinTin Winata",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TinTinWinata/react-textarea/issues"
+  },
+  "homepage": "https://github.com/TinTinWinata/react-textarea#readme",
+  "devDependencies": {
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.6.2"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1"
+  }
+}
