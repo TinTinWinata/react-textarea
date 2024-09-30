@@ -1,4 +1,4 @@
-![React Text Area](https://github.com/fkhadra/react-toastify/examples/1.gif "React Text Area")
+![React Text Area](https://raw.githubusercontent.com/TinTinWinata/react-textarea/refs/heads/master/examples/1.gif "React Text Area")
 
 # React-Text Area
 
