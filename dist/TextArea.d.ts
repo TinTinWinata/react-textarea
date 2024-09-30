@@ -1,4 +1,5 @@
 import React, { TextareaHTMLAttributes } from "react";
+import "./textarea.css";
 export interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
     placeholder?: string;
     className?: string;
