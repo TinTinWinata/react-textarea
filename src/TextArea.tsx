@@ -1,6 +1,6 @@
 import React, { TextareaHTMLAttributes, useEffect, useRef } from "react";
 
-interface TextAreaProps
+export interface TextAreaProps
   extends Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, "onChange"> {
   placeholder?: string;
   className?: string;

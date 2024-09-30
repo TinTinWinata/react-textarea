@@ -1,5 +1,5 @@
 import { TextareaHTMLAttributes } from "react";
-interface TextAreaProps extends Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, "onChange"> {
+export interface TextAreaProps extends Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, "onChange"> {
     placeholder?: string;
     className?: string;
     rows?: number;
@@ -7,4 +7,3 @@ interface TextAreaProps extends Omit<TextareaHTMLAttributes<HTMLTextAreaElement>
     initialSize?: number;
 }
 export default function TextArea({ initialSize, onChange, style, ...props }: TextAreaProps): import("react/jsx-runtime").JSX.Element;
-export {};
