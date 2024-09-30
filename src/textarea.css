@@ -1,0 +1,13 @@
+.react-textarea {
+  width: "100%";
+  resize: "none";
+  padding: "12px";
+  border: "1.5px solid #ccc";
+  border-radius: "5px";
+  line-height: 1.2;
+  font-family: "inherit";
+}
+
+.react-textarea:focus {
+  outline: none;
+}

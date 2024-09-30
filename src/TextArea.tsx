@@ -5,6 +5,7 @@ import React, {
   forwardRef,
   useImperativeHandle,
 } from "react";
+import "./textarea.css";
 
 export interface TextAreaProps
   extends TextareaHTMLAttributes<HTMLTextAreaElement> {
@@ -16,19 +17,14 @@ export interface TextAreaProps
 }
 
 const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
-  ({ initialSize = 100, onChangeText, onChange, style, ...props }, ref) => {
+  (
+    { initialSize = 100, className, onChangeText, onChange, style, ...props },
+    ref
+  ) => {
     const innerRef = useRef<HTMLTextAreaElement>(null);
 
     const baseStyle: React.CSSProperties = {
-      width: "100%",
-      resize: "none",
-      padding: "12px",
-      border: "1.5px solid #ccc",
-      borderRadius: "5px",
       minHeight: `${initialSize}px`,
-      fontFamily: "inherit",
-      fontSize: "1rem",
-      lineHeight: "1.5",
     };
 
     function checkSize() {
@@ -54,7 +50,8 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       <textarea
         {...props}
         ref={innerRef}
-        style={{ ...baseStyle, ...style }}
+        className={`react-textarea ${className}`}
+        style={{ ...style, ...baseStyle }}
         onChange={(e) => {
           checkSize();
           onChange && onChange(e);
