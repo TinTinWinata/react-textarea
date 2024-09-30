@@ -1,12 +1,12 @@
 {
   "name": "@tintinwinata/react-textarea",
-  "version": "1.0.4",
+  "version": "1.0.8",
   "description": "React Textarea Component for React.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "publish": "tsc && npm publish"
+    "publish": "tsc && npm publish --access public"
   },
   "repository": {
     "type": "git",
