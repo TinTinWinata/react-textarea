@@ -1,6 +1,6 @@
 {
   "name": "@tintinwinata/react-textarea",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "React Textarea Component for React.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
