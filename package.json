@@ -1,7 +1,7 @@
 {
   "name": "@tintinwinata/react-textarea",
   "version": "1.0.20",
-  "description": "React Textarea Component for React.js",
+  "description": "Auto-resizing React textarea component with TypeScript support and modern styling",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "dist/index.mjs",
@@ -25,7 +25,22 @@
     }
   },
   "keywords": [
-    "react"
+    "react",
+    "textarea",
+    "typescript",
+    "auto-resize",
+    "form",
+    "ui-component",
+    "dynamic-height",
+    "react-component",
+    "javascript",
+    "frontend",
+    "web-development",
+    "npm-package",
+    "component-library",
+    "input",
+    "responsive",
+    "modern-ui"
   ],
   "author": "TinTin Winata",
   "license": "ISC",
